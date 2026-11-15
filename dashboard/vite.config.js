@@ -32,7 +32,8 @@ export default defineConfig({
   server: {
     allowedHosts: [
       'openshorts.app',
-      'www.openshorts.app'
+      'www.openshorts.app',
+      '.trycloudflare.com', // leading dot allows any *.trycloudflare.com tunnel host
     ],
     proxy: {
       '/api': { target: backend, changeOrigin: true },
